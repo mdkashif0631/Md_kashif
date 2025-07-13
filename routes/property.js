@@ -6,6 +6,7 @@ import {
   getPropertyByFileName,
   addCommercialProperty,
   getAllCommercialProperties,
+  getCommercialPropertyByFileName,
   addPlotProperty,
   getAllPlotProperties
 } from '../controllers/propertyController.js';
@@ -17,6 +18,7 @@ Router.get('/properties', getAllProperties);
 Router.get('/properties/:projectName', getPropertyByFileName);
 Router.post('/commercialproperties', upload, addCommercialProperty);
 Router.get('/commercialproperties', getAllCommercialProperties);
+Router.get('/commercialproperties/:projectName', getCommercialPropertyByFileName);
 Router.post('/plotproperties', upload, addPlotProperty);
 Router.get('/plotproperties', getAllPlotProperties);
 

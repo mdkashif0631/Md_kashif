@@ -116,7 +116,7 @@ export const getAllProperties = async (req, res) => {
 
 export const getPropertyByFileName = async (req, res) => {
   try {
-    const property = await Property.findOne({ Project_File_Name: req.params.projectName });
+    const property = await Property.findOne({ Project_Name: req.params.projectName });
     if (!property) return res.status(404).json({ message: 'Project not found' });
     res.json(property);
   } catch (err) {
@@ -194,6 +194,16 @@ export const getAllCommercialProperties = async (req, res) => {
     res.json(properties);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch commercial properties' });
+  }
+};
+
+export const getCommercialPropertyByFileName = async (req, res) => {
+  try {
+    const properties = await CommercialProperty.findOne({ Project_Name: req.params.projectName });
+    if (!properties) return res.status(404).json({ message: 'Project not found' });
+    res.json(properties);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch property' });
   }
 };
 
