@@ -2,20 +2,20 @@ import { Schema, model } from 'mongoose';
 
 const commercialPropertySchema = new Schema({
   Id: String,
-  Project_type: String,
+  Project_type: { type: String, required: true },
 
-  Project_File_Name: String,
-  Project_Name: String,
-  Developer_Name: String,
-  Developer_Logo: String,
-  Logoimg: String,
+  Project_File_Name: { type: String, required: true },
+  Project_Name: { type: String, required: true },
+  Developer_Name: { type: String, required: true },
+  Developer_Logo: { type: String, required: true },
+  Logoimg: { type: String, required: true },
   Description: String,
-  Developer_Rera_No: String,
-  Our_Rera_Number: String,
+  Developer_Rera_No: { type: String, required: true },
+  Our_Rera_Number: { type: String, required: true },
 
-  State: String,
-  City: String,
-  Location: String,
+  State: { type: String, required: true },
+  City: { type: String, required: true },
+  Location: { type: String, required: true },
   Localities: String,
   Pin_Code: String,
 
@@ -38,12 +38,12 @@ const commercialPropertySchema = new Schema({
   End_price: String,
   Start_price: String,
 
-  Image: String,
+  Image: { type: String, required: true },
   Image01: String,
   Image02: String,
   Image03: String,
   Image04: String,
-  Main_Image: String,
+  Main_Image: { type: String, required: true },
 
   Built: String,
   Garages: String,
