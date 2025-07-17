@@ -2,20 +2,23 @@ import { Schema, model } from 'mongoose';
 
 const plotPropertySchema = new Schema({
   Id: String,
-  Project_type: String,
+  Project_type: { type: String, required: true },
+  Project_category: { type: String, required: true},
+  Project_status: { type: String, required: true},
+  Project_tag: { type: String, required: true},
 
-  Project_File_Name: String,
-  Project_Name: String,
-  Developer_Name: String,
-  Developer_Logo: String,
+  Project_File_Name: { type: String, required: true },
+  Project_Name: { type: String, required: true },
+  Developer_Name: { type: String, required: true },
+  Developer_Logo: { type: String, required: true },
   Logoimg: String,
   Description: String,
-  Developer_Rera_No: String,
+  Developer_Rera_No: { type: String, required: true },
   Our_Rera_Number: String,
 
-  State: String,
-  City: String,
-  Location: String,
+  State: { type: String, required: true },
+  City: { type: String, required: true },
+  Location: { type: String, required: true },
   Localities: String,
   Pin_Code: String,
 

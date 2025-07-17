@@ -15,6 +15,9 @@ export const addProperty = async (req, res) => {
 
     const property = new Property({
       Project_type: formData.Project_type,
+      Project_category: formData.Project_category,
+      Project_status: formData.Project_status,
+      Project_tag: formData.Project_tag,
       Id: formData.Id,
       Project_File_Name: formData.Project_File_Name,
       Project_Name: formData.Project_Name,
@@ -133,6 +136,9 @@ export const addCommercialProperty = async (req, res) => {
     const commercial = new CommercialProperty({
       Id: formData.Id,
       Project_type: formData.Project_type,
+      Project_category: formData.Project_category,
+      Project_status: formData.Project_status,
+      Project_tag: formData.Project_tag,
       Project_File_Name: formData.Project_File_Name,
       Project_Name: formData.Project_Name,
       Developer_Name: formData.Developer_Name,
@@ -216,6 +222,9 @@ export const addPlotProperty = async (req, res) => {
     const plot = new PlotProperty({
       Id: formData.Id,
       Project_type: formData.Project_type,
+      Project_category: formData.Project_category,
+      Project_status: formData.Project_status,
+      Project_tag: formData.Project_tag,
       Project_File_Name: formData.Project_File_Name,
       Project_Name: formData.Project_Name,
       Developer_Name: formData.Developer_Name,
