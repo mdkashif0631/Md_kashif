@@ -12,7 +12,7 @@ const propertySchema = new Schema({
   Project_File_Name: { type: String, required: true },
   Project_Name: { type: String, required: true },
   Developer_Name: { type: String, required: true },
-  Developer_Logo: { type: String, required: true },
+  Developer_Logo: String,
   Logoimg: String,
   Description: String,
   Developer_Rera_No: { type: String, required: true },
@@ -72,12 +72,12 @@ const propertySchema = new Schema({
   End_price: String,
   Start_price: String,
 
-  Image: { type: String, required: true },
+  Image: String,
   Image01: String,
   Image02: String,
   Image03: String,
   Image04: String,
-  Main_Image: { type: String, required: true },
+  Main_Image: String,
 
   Built: String,
   Garages: String,
