@@ -77,7 +77,7 @@ const propertySchema = new Schema({
   Image02: String,
   Image03: String,
   Image04: String,
-  Main_Image: String,
+  Main_Image: { type: String, required: true},
 
   Built: String,
   Garages: String,
