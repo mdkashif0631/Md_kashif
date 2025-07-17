@@ -4,7 +4,10 @@ import { Schema, model } from 'mongoose';
 
 
 const propertySchema = new Schema({
-  Project_type: { type: String, required: true },
+  Project_type: { type: String, required: true},
+  Project_category: { type: String, required: true},
+  Project_status: { type: String, required: true},
+  Project_tag: { type: String, required: true},
   Id: String,
   Project_File_Name: { type: String, required: true },
   Project_Name: { type: String, required: true },
