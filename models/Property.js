@@ -13,10 +13,8 @@ const propertySchema = new Schema({
   Project_Name: { type: String, required: true },
   Developer_Name: { type: String, required: true },
   Developer_Logo: String,
-  Logoimg: String,
   Description: String,
   Developer_Rera_No: { type: String, required: true },
-  Our_Rera_Number: { type: String, required: true },
 
   // Address
   State: { type: String, required: true },

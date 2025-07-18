@@ -16,7 +16,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage }).fields([
   { name: 'Developer_Logo' },
-  { name: 'Logoimg' },
   { name: 'Image' },
   { name: 'Image01' },
   { name: 'Image02' },
